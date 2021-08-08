@@ -32,7 +32,6 @@ func GetBooks() {
 		log.Fatal(readErr)
 	}
 
-
 	// unmarshal response to Books struct
 	var books models.Books
 	jsonErr := json.Unmarshal(body, &books)
