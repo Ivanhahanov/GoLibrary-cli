@@ -110,6 +110,15 @@ func main() {
 					return nil
 				},
 			},
+			{
+				Name: "upload",
+				Usage: "upload files",
+				Flags: searchFlags,
+				Action: func(c *cli.Context) error {
+					//client.ParseDescription(c.Args().Get(1))
+					return client.UploadData(c.Args().Get(0), c.Args().Get(1))
+				},
+			},
 		},
 	}
 

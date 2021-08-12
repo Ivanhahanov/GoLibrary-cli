@@ -5,9 +5,17 @@ type Book struct {
 	Title  string   `json:"title"`
 	Author string   `json:"author"`
 	Tags   []string `json:"tags"`
-	Path   string   `json:"path"`
 }
 
 type Books struct {
 	Books []Book `json:"books"`
+}
+
+type Description struct {
+	ID              string   `yaml:"id"`
+	Title           string   `yaml:"title"`
+	Author          string   `yaml:"author"`
+	Publisher       string   `yaml:"publisher"`
+	Tags            []string `yaml:"tags"`
+	BookDescription string   `yaml:"description"`
 }

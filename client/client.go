@@ -13,9 +13,11 @@ import (
 	"time"
 )
 
+const url = "http://localhost"
+
 func GetBooks() {
 	client := http.Client{Timeout: time.Second * 2}
-	req, err := http.NewRequest(http.MethodGet, "http://localhost/books", nil)
+	req, err := http.NewRequest(http.MethodGet, url+"/books", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
